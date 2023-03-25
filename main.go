@@ -15,6 +15,7 @@ func main() {
 	router.Use(app.JwtAuthentication)
 	router.HandleFunc("api/user/new", controllers.CreateAccount).Methods("POST")
 	router.HandleFunc("api/user/login", controllers.Authenticate).Methods("POST")
+	router.HandleFunc("api/me/contacts", controllers.GetContactsFor).Methods("GET")
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
