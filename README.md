@@ -1,0 +1,5 @@
+# rest
+## Usage
+```
+$ go run .
+```
